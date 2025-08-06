@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Corporation</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+    <meta name="description" content="Unifique seus fluxos de trabalho de LLM com segurança. Conecte OpenAI, Anthropic e Google em um único portal corporativo e privado.">
+    <meta name="keywords" content="portal LLM seguro, chat corporativo AI, acesso multi-modelo, IA empresarial, OpenAI, Anthropic, Google">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg {
+            background: linear-gradient(135deg, #00D4FF 0%, #8B5CF6 50%, #F472B6 100%);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #00D4FF 0%, #8B5CF6 50%, #F472B6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .dark-bg {
+            background-color: #0D0E15;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+        }
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="dark-bg text-white smooth-scroll">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h2 class="text-2xl font-bold gradient-text">Nexus Corporation</h2>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#funcionalidades" class="text-gray-300 hover:text-white transition-colors">Funcionalidades</a>
+                        <a href="#como-funciona" class="text-gray-300 hover:text-white transition-colors">Como Funciona</a>
+                        <a href="#precos" class="text-gray-300 hover:text-white transition-colors">Preços</a>
+                        <a href="#contato" class="text-gray-300 hover:text-white transition-colors">Contato</a>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-300 hover:text-white">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-black/90 backdrop-blur-md">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#funcionalidades" class="block px-3 py-2 text-gray-300 hover:text-white">Funcionalidades</a>
+                <a href="#como-funciona" class="block px-3 py-2 text-gray-300 hover:text-white">Como Funciona</a>
+                <a href="#precos" class="block px-3 py-2 text-gray-300 hover:text-white">Preços</a>
+                <a href="#contato" class="block px-3 py-2 text-gray-300 hover:text-white">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 gradient-bg opacity-10"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+                Unifique seus fluxos de trabalho de 
+                <span class="gradient-text">IA com segurança</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Conecte modelos como ChatGPT, Claude, e outros em um único portal corporativo e privado.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#contato" class="gradient-bg text-white px-8 py-4 rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity">
+                    Solicitar Demonstração
+                </a>
+                <a href="#precos" class="border border-white/30 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-colors">
+                    Ver Preços
+                </a>
+            </div>
+        </div>
+        
+        <!-- Decorative elements -->
+        <div class="absolute top-1/4 left-10 w-32 h-32 gradient-bg rounded-full opacity-20 blur-xl"></div>
+        <div class="absolute bottom-1/4 right-10 w-48 h-48 gradient-bg rounded-full opacity-20 blur-xl"></div>
+    </section>
+
+    <!-- Funcionalidades Section -->
+    <section id="funcionalidades" class="py-20 bg-gray-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    Funcionalidades <span class="gradient-text">Avançadas</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Tudo que você precisa para usar IA corporativa com segurança e eficiência
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="card-hover bg-gray-800/50 p-8 rounded-xl border border-gray-700/50">
+                    <div class="gradient-bg w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="layers" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Acesso Multi-provedor</h3>
+                    <p class="text-gray-300">Conecte-se a OpenAI, Anthropic, Google e outros provedores em uma única interface.</p>
+                </div>
+                
+                <div class="card-hover bg-gray-800/50 p-8 rounded-xl border border-gray-700/50">
+                    <div class="gradient-bg w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="shield-check" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Dados Seguros</h3>
+                    <p class="text-gray-300">Seus dados nunca são usados para treinamento. Conexões diretas e criptografadas com cada provedor.</p>
+                </div>
+                
+                <div class="card-hover bg-gray-800/50 p-8 rounded-xl border border-gray-700/50">
+                    <div class="gradient-bg w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="users" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Agentes Especializados</h3>
+                    <p class="text-gray-300">Serviço de criação de agentes especializados nas regras de negócio de sua empresa.</p>
+                </div>
+                
+                <div class="card-hover bg-gray-800/50 p-8 rounded-xl border border-gray-700/50">
+                    <div class="gradient-bg w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="bar-chart-3" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Converse com os últimos modelos lançados</h3>
+                    <p class="text-gray-300">Utilize modelos no primeiro dia de seu lançamento, assim que disponibilizados para o público.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Como Funciona Section -->
+    <section id="como-funciona" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    Como <span class="gradient-text">Funciona</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Três passos simples para transformar sua experiência com IA
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl font-bold text-white">1</span>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Levantamento de Requisitos</h3>
+                    <p class="text-gray-300 text-lg">
+                        Escolha seu modelo de IA favorito e escolha com quantos usuários você quer começar.
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl font-bold text-white">2</span>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Converse e Colabore</h3>
+                    <p class="text-gray-300 text-lg">
+                        Use o serviço como se usa qualquer outro chat, mas com a segurança de que seus dados estão protegidos.
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl font-bold text-white">3</span>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Acesso Centralizado</h3>
+                    <p class="text-gray-300 text-lg">
+                        Acesse os modelos contratados em uma interface centralizada, com segurança e privacidade garantidas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preços Section -->
+    <section id="precos" class="py-20 bg-gray-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    Planos e <span class="gradient-text">Preços</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Escolha o plano ideal para sua empresa
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Plano Teste -->
+                <div class="bg-gray-800/50 p-8 rounded-xl border border-gray-700/50">
+                    <h3 class="text-2xl font-bold mb-4">Lite</h3>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold">R$ 20</span>
+                        <span class="text-gray-300">/usuário/mês</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                         <li class="flex items-center">
+                            <i data-lucide="check" class="w-5 h-5 text-green-400 mr-3"></i>
+                            <span>Acesso a todos os modelos de IA</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="check" class="w-5 h-5 text-green-400 mr-3"></i>
+                            <span>Até 10 usuários</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="check" class="w-5 h-5 text-green-400 mr-3"></i>
+                            <span>25.000 tokens/usuário/mês</span>
+                        </li>
+                        
+                    </ul>
+                    <a href="http://wa.me/+5562993027586", target="_blank">
+                    <button class="w-full border border-white/30 text-white py-3 rounded-lg hover:bg-white/10 transition-colors">
+                        Escolher Lite
+                    </button>
+                    </a>
+                </div>
+                
+                <!-- Plano Pro -->
+                <div class="bg-gray-800/50 p-8 rounded-xl border-2 border-purple-500 relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="gradient-bg px-4 py-1 rounded-full text-sm font-semibold">Mais Popular</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Pro</h3>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold">R$ 15</span>
+                        <span class="text-gray-300">/usuário/mês</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i data-lucide="check" class="w-5 h-5 text-green-400 mr-3"></i>
+                            <span>Acesso a todos os modelos de IA</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="check" class="w-5 h-5 text-green-400 mr-3"></i>
+                            <span>De 10 a 50 usuários</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="check" class="w-5 h-5 text-green-400 mr-3"></i>
+                            <span>35.000 tokens/usuário/mês</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="check" class="w-5 h-5 text-green-400 mr-3"></i>
+                            <span>Criação de Agentes Especializados</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="check" class="w-5 h-5 text-green-400 mr-3"></i>
+                            <span>Suporte prioritário</span>
+                        </li>
+                    </ul>
+                    <a href="http://wa.me/+5562993027586", target="_blank">
+                    <button class="w-full gradient-bg text-white py-3 rounded-lg hover:opacity-90 transition-opacity">
+                        Escolher Pro
+                    </button>
+                    </a>   
+                </div>
+                
+                <!-- Plano Corporativo -->
+                <div class="bg-gray-800/50 p-8 rounded-xl border border-gray-700/50">
+                    <h3 class="text-2xl font-bold mb-4">Corporativo</h3>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold">Custom</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i data-lucide="check" class="w-5 h-5 text-green-400 mr-3"></i>
+                            <span>Acesso a todos os modelos de IA</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="check" class="w-5 h-5 text-green-400 mr-3"></i>
+                            <span>Volume personalizado</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="check" class="w-5 h-5 text-green-400 mr-3"></i>
+                            <span>Integrações inclusas</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="check" class="w-5 h-5 text-green-400 mr-3"></i>
+                            <span>SLA garantido</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="check" class="w-5 h-5 text-green-400 mr-3"></i>
+                            <span>Suporte dedicado</span>
+                        </li>
+                    </ul>
+                    <a href="http://wa.me/+5562993027586", target="_blank">
+                        <button class="w-full border border-white/30 text-white py-3 rounded-lg hover:bg-white/10 transition-colors">
+                        Falar com Vendas
+                    </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos Section -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    O que nossos <span class="gradient-text">clientes dizem</span>
+                </h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-800/50 p-8 rounded-xl border border-gray-700/50">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-white font-bold">VA</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Victor Albuquerque</h4>
+                            <p class="text-gray-400 text-sm">CEO, Fokus Tecnologia</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">
+                        "A Nexus transformou nossa abordagem de IA. Finalmente temos controle total sobre nossos dados enquanto acessamos os melhores modelos do mercado."
+                    </p>
+                </div>
+                
+                <div class="bg-gray-800/50 p-8 rounded-xl border border-gray-700/50">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-400 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-white font-bold">JS</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Igor Faria</h4>
+                            <p class="text-gray-400 text-sm">CEO, InnovaCorp</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">
+                        "A segurança e compliance que precisávamos, com a flexibilidade de escolher o melhor modelo para cada tarefa. Excelente!"
+                    </p>
+                </div>
+                
+                <div class="bg-gray-800/50 p-8 rounded-xl border border-gray-700/50">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-r from-cyan-400 to-pink-400 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-white font-bold">AS</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Ana Santos</h4>
+                            <p class="text-gray-400 text-sm">CIO, DataTech</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">
+                        "Interface intuitiva, relatórios detalhados e suporte excepcional. A Nexus é essencial para nossa estratégia de IA."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-900/50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    Perguntas <span class="gradient-text">Frequentes</span>
+                </h2>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="faq-item bg-gray-800/50 rounded-xl border border-gray-700/50">
+                    <button class="faq-question w-full text-left p-6 flex justify-between items-center">
+                        <span class="text-lg font-semibold">Como vocês garantem a segurança dos nossos dados?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer p-6 pt-0">
+                        <p class="text-gray-300">
+                            Utilizamos as APIs para desenvolvedores dos provedores de LLM, garantindo que seus dados nunca sejam usados para treinamento. Também temos um banco de dados criptografado e acesso controlado.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="faq-item bg-gray-800/50 rounded-xl border border-gray-700/50">
+                    <button class="faq-question w-full text-left p-6 flex justify-between items-center">
+                        <span class="text-lg font-semibold">O que acontece quando meus tokens acabam?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer p-6 pt-0">
+                        <p class="text-gray-300">
+                            Você continua usando o chat normalmente. Os tokens que passarem do limite do plano serão cobrados à parte, de acordo com o uso e o modelo de IA escolhido.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item bg-gray-800/50 rounded-xl border border-gray-700/50">
+                    <button class="faq-question w-full text-left p-6 flex justify-between items-center">
+                        <span class="text-lg font-semibold">Quais provedores de LLM vocês suportam?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer p-6 pt-0">
+                        <p class="text-gray-300">
+                            Atualmente suportamos os principais provedores, como: OpenAI (GPT-4), Anthropic (Claude), Google (Gemini) e estamos constantemente adicionando novos provedores conforme a demanda do mercado.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="faq-item bg-gray-800/50 rounded-xl border border-gray-700/50">
+                    <button class="faq-question w-full text-left p-6 flex justify-between items-center">
+                        <span class="text-lg font-semibold">Como funciona o controle de acesso da equipe?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer p-6 pt-0">
+                        <p class="text-gray-300">
+                            Nosso serviço utiliza os principais métodos de autenticação presentes no mercado — como por exemplo, o SSO da Microsoft.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item bg-gray-800/50 rounded-xl border border-gray-700/50">
+                    <button class="faq-question w-full text-left p-6 flex justify-between items-center">
+                        <span class="text-lg font-semibold">Vocês oferecem integração com sistemas existentes?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer p-6 pt-0">
+                        <p class="text-gray-300">
+                            Estamos trabalhando para oferecer integração com as principais ferramentas corporativas no mercado. Integrações personalizadas estão disponíveis para clientes corporativos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section id="contato" class="py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                Pronto para <span class="gradient-text">começar?</span>
+            </h2>
+            <p class="text-xl text-gray-300 mb-12">
+                Entre em contato conosco e descubra como a Nexus pode transformar sua experiência com IA
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <a href="http://wa.me/+5562993027586" target="_blank" 
+                   class="gradient-bg text-white px-8 py-4 rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity flex items-center">
+                    <i data-lucide="message-circle" class="w-5 h-5 mr-2"></i>
+                    Falar com Vendas no WhatsApp
+                </a>
+                
+                <a href="mailto:contato@corpnexus.com.br" 
+                   class="border border-white/30 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-colors flex items-center">
+                    <i data-lucide="mail" class="w-5 h-5 mr-2"></i>
+                    contato@corpnexus.com.br
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black/50 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-2xl font-bold gradient-text mb-4">Nexus Corporation</h3>
+                    <p class="text-gray-300 mb-4">
+                        Prover acesso seguro e integrado às melhores tecnologias de IA para transformar 
+                        a forma como as empresas se comunicam e tomam decisões.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Política de Privacidade</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Termos de Uso</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Documentação</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Redes Sociais</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com", target="_blank" class="text-gray-300 hover:text-white transition-colors">
+                            <i data-lucide="linkedin" class="w-6 h-6"></i>
+                        </a>
+                        <a href="https://www.x.com/home", target="_blank" class="text-gray-300 hover:text-white transition-colors">
+                            <i data-lucide="twitter" class="w-6 h-6"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">
+                    © 2024 Nexus Corporation. Todos os direitos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
