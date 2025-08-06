@@ -80,6 +80,37 @@ services:
       - vectordb
     env_file:
       - .env
+  # NEW: MySQL for Ghost
+  mysql:
+    image: mysql:8.0
+    container_name: ghost-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: your_root_password_here  # Change this!
+      MYSQL_DATABASE: ghost
+      MYSQL_USER: ghost
+      MYSQL_PASSWORD: your_ghost_password_here  # Change this!
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+
+  # NEW: Ghost Blog Service
+  ghost:
+    image: ghost:5-alpine
+    container_name: ghost-blog
+    restart: always
+    depends_on:
+      - mysql
+    environment:
+      database__client: mysql
+      database__connection__host: mysql
+      database__connection__user: ghost
+      database__connection__password: your_ghost_password_here  # Match above
+      database__connection__database: ghost
+      url: https://blog.corpnexus.com.br  # Set to your blog URL
+      NODE_ENV: production  # Or 'development' for testing
+    volumes:
+      - ./ghost/content:/var/lib/ghost/content  # Persists themes, images, posts
 
 volumes:
   pgdata2:
+  mysql_data:
